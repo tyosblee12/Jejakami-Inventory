@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
       debugShowCheckedModeBanner: false,
-      home: const DashBoard(),
+      home: const HomePage(),
     );
   }
 }

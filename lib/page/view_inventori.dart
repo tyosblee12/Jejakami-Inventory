@@ -1,11 +1,10 @@
+// ignore_for_file: avoid_print
+
 import 'dart:convert';
 import 'dart:async';
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
-// import 'package:responsive_grid_list/responsive_grid_list.dart';
 
 class Photo {
   final int id;
@@ -47,38 +46,6 @@ class _InventoriPageState extends State<InventoriPage> {
         await http.get(url2, headers: {"Content-Type": "application/json"});
     final List body = json.decode(response.body);
     return body.map((e) => Photo.fromJson(e)).toList();
-  }
-
-// PULL TO REFRESH
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  final GlobalKey<LiquidPullToRefreshState> _refreshIndicatorKey =
-      GlobalKey<LiquidPullToRefreshState>();
-
-  static int refreshNum = 10; // number that changes when refreshed
-  Stream<int> counterStream =
-      Stream<int>.periodic(const Duration(seconds: 3), (x) => refreshNum);
-
-  Future<void> _handleRefresh() {
-    final Completer<void> completer = Completer<void>();
-    Timer(const Duration(seconds: 1), () {
-      completer.complete();
-    });
-    setState(() {
-      refreshNum = Random().nextInt(100);
-    });
-    return completer.future.then<void>((_) {
-      ScaffoldMessenger.of(_scaffoldKey.currentState!.context).showSnackBar(
-        SnackBar(
-          content: const Text('Refresh complete'),
-          action: SnackBarAction(
-            label: 'RETRY',
-            onPressed: () {
-              _refreshIndicatorKey.currentState!.show();
-            },
-          ),
-        ),
-      );
-    });
   }
 
   @override
@@ -144,11 +111,11 @@ Widget buildPosts(List<Photo> posts) {
       Flexible(
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
+            crossAxisCount: 3,
             childAspectRatio: 1.0,
             crossAxisSpacing: 12,
             mainAxisSpacing: 12,
-            mainAxisExtent: 300,
+            mainAxisExtent: 200,
           ),
           // shrinkWrap: true,
           padding: const EdgeInsets.all(15),
@@ -163,7 +130,7 @@ Widget buildPosts(List<Photo> posts) {
                 },
                 child: Container(
                   padding: const EdgeInsets.all(15),
-                  height: 80,
+                  height: 100,
                   decoration: BoxDecoration(
                     color: Colors.transparent,
                     borderRadius: BorderRadius.circular(8),
@@ -184,8 +151,8 @@ Widget buildPosts(List<Photo> posts) {
                         children: [
                           Row(children: [
                             Expanded(
-                                child: Image.network(post.thumbnailUrl,
-                                    fit: BoxFit.fill)),
+                                child:
+                                    Image.network(post.url, fit: BoxFit.cover)),
                             const SizedBox(
                               height: 20,
                             ),
@@ -195,7 +162,12 @@ Widget buildPosts(List<Photo> posts) {
                           ),
                           Row(
                             children: [
-                              Expanded(child: Text(post.title, maxLines: 2)),
+                              Expanded(
+                                  child: Text(
+                                post.title,
+                                maxLines: 2,
+                                style: const TextStyle(fontSize: 8),
+                              )),
                             ],
                           ),
                         ],

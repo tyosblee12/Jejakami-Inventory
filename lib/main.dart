@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutterlogin/dashboard.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutterlogin/login.dart';
 import 'package:flutterlogin/login_option.dart';
 import 'package:flutterlogin/signup.dart';
 import 'package:flutterlogin/signup_option.dart';
 
+// !MAIN COLOR PALETTE
+// fromARGB(255, 96, 114, 116)
+// fromARGB(255,250, 238, 209)
+// fromARGB(255,222, 208, 182)
+// fromARGB(255,178, 165, 155)
 void main() {
   runApp(const MyApp());
 }
@@ -23,7 +29,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: const DashBoard(),
     );
   }
 }

@@ -87,10 +87,11 @@ class _MyDrawerState extends State<MyDrawer> {
   Widget build(BuildContext context) {
     return Drawer(
       width: 230,
-      backgroundColor: Colors.white,
+      backgroundColor: const Color.fromARGB(255, 96, 114, 116),
       child: FanSideDrawer(
-        selectedColor: const Color.fromARGB(225, 246, 177, 122),
-        selectedItemBackgroundColor: const Color.fromARGB(225, 45, 50, 80),
+        unSelectedColor: Colors.white,
+        selectedColor: const Color.fromARGB(224, 139, 63, 0),
+        selectedItemBackgroundColor: const Color.fromARGB(255, 250, 238, 209),
         drawerType: DrawerType.pipe,
         drawerItemsWidth: 200,
         menuItems: menuItems,

@@ -20,8 +20,9 @@ class _ProfilePageState extends State<ProfilePage> {
             decoration: const BoxDecoration(
               // color: Colors.grey[400],
               image: DecorationImage(
-                  image: NetworkImage(
-                      'https://cdn.pixabay.com/photo/2021/09/03/00/51/temple-6594770_1280.jpg'),
+                  image:
+                      NetworkImage('https://source.unsplash.com/KOpmRBpHtB8'),
+                  // 'https://cdn.pixabay.com/photo/2021/09/03/00/51/temple-6594770_1280.jpg'),
                   fit: BoxFit.cover),
             )),
         Transform.translate(
@@ -37,20 +38,21 @@ class _ProfilePageState extends State<ProfilePage> {
                       image: DecorationImage(
                           fit: BoxFit.cover,
                           image: NetworkImage(
-                              'https://cdn.pixabay.com/photo/2016/03/31/19/56/avatar-1295399_640.png'))),
+                              'https://yt3.googleusercontent.com/xrNN0GrMMCjXe0Q-ijV8eOOMoJJ4lJ-CG7ZZBVUfqbNH13H0JbkhDpfKtmu5B2Ytrl9OXV6A=s900-c-k-c0x00ffffff-no-rj'))),
+                  // 'https://cdn.pixabay.com/photo/2016/03/31/19/56/avatar-1295399_640.png'))),
                 ),
                 const SizedBox(
                   height: 12,
                 ),
                 const Text(
-                  'Nabil Chen',
+                  'Setyo Dwi Cahyo',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
                 ),
                 const SizedBox(
                   height: 5,
                 ),
                 const Text(
-                  'Director of Sahretech',
+                  'Editor & QC at Jejakami Project',
                 ),
                 const SizedBox(
                   height: 15,
@@ -62,7 +64,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     Container(
                       height: 40, // Atur tinggi Container sesuai kebutuhan Anda
                       decoration: BoxDecoration(
-                        color: Colors.blue,
+                        color: Color.fromARGB(255, 96, 114, 116),
                         borderRadius: BorderRadius.circular(25),
                       ),
                       child: ElevatedButton(
@@ -78,11 +80,12 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                           child: const Row(
                             children: [
-                              Icon(Icons.person_add_alt),
+                              Icon(Icons.person_add_alt, color: Colors.white),
                               SizedBox(
                                 width: 5,
                               ),
-                              Text('Follow')
+                              Text('Follow',
+                                  style: TextStyle(color: Colors.white))
                             ],
                           )),
                     ),
@@ -92,7 +95,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     Container(
                       height: 40, // Atur tinggi Container sesuai kebutuhan Anda
                       decoration: BoxDecoration(
-                        color: Colors.blue,
+                        color: Color.fromARGB(255, 96, 114, 116),
                         borderRadius: BorderRadius.circular(25),
                       ),
                       child: ElevatedButton(
@@ -100,7 +103,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             // Implement your button action here
                           },
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.transparent,
+                            backgroundColor: Colors.transparent,
                             shadowColor: Colors.transparent,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25),
@@ -108,11 +111,12 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                           child: const Row(
                             children: [
-                              Icon(Icons.message),
+                              Icon(Icons.message, color: Colors.white),
                               SizedBox(
                                 width: 5,
                               ),
-                              Text('Message')
+                              Text('Message',
+                                  style: TextStyle(color: Colors.white))
                             ],
                           )),
                     ),
@@ -122,7 +126,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     Container(
                       height: 40, // Atur tinggi Container sesuai kebutuhan Anda
                       decoration: BoxDecoration(
-                        color: Colors.blue,
+                        color: Color.fromARGB(255, 96, 114, 116),
                         borderRadius: BorderRadius.circular(25),
                       ),
                       child: ElevatedButton(
@@ -130,7 +134,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             // Implement your button action here
                           },
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.transparent,
+                            backgroundColor: Colors.transparent,
                             shadowColor: Colors.transparent,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25),
@@ -138,11 +142,12 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                           child: const Row(
                             children: [
-                              Icon(Icons.settings),
+                              Icon(Icons.settings, color: Colors.white),
                               SizedBox(
                                 width: 5,
                               ),
-                              Text('Edit')
+                              Text('Edit',
+                                  style: TextStyle(color: Colors.white))
                             ],
                           )),
                     )

@@ -31,20 +31,20 @@ class _DashboardState extends State {
     return Scaffold(
       appBar: AppBar(
         iconTheme:
-            const IconThemeData(color: Color.fromARGB(255, 246, 177, 122)),
+            const IconThemeData(color: Color.fromARGB(255, 250, 238, 209)),
         title: const Text(
           'Jejakami Inventori',
           style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 45, 50, 80),
+        backgroundColor: const Color.fromARGB(255, 96, 114, 116),
       ),
       drawer: const MyDrawer(),
       bottomNavigationBar: MoltenBottomNavigationBar(
         domeHeight: 18,
         barHeight: 50,
-        barColor: const Color.fromARGB(255, 45, 50, 80),
-        domeCircleColor: const Color.fromARGB(255, 237, 184, 49),
+        barColor: const Color.fromARGB(255, 96, 114, 116),
+        domeCircleColor: const Color.fromARGB(255, 250, 238, 209),
         selectedIndex: selectedIndex,
         onTabChange: (clickedIndex) {
           setState(() {
@@ -54,13 +54,16 @@ class _DashboardState extends State {
         tabs: [
           MoltenTab(
               icon: const Icon(Icons.explore),
-              unselectedColor: const Color.fromARGB(255, 246, 177, 122)),
+              unselectedColor: const Color.fromARGB(255, 241, 231, 223),
+              selectedColor: Colors.black),
           MoltenTab(
               icon: const Icon(Icons.home),
-              unselectedColor: const Color.fromARGB(255, 246, 177, 122)),
+              unselectedColor: const Color.fromARGB(255, 241, 231, 223),
+              selectedColor: Colors.black),
           MoltenTab(
               icon: const Icon(Icons.person),
-              unselectedColor: const Color.fromARGB(255, 246, 177, 122)),
+              unselectedColor: const Color.fromARGB(255, 241, 231, 223),
+              selectedColor: Colors.black),
         ],
       ),
       body: Center(

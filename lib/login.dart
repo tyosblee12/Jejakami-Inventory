@@ -124,7 +124,8 @@ class _LoginPageState extends State<Login> {
           "SELAMAT DATANG DI",
           style: TextStyle(
             fontSize: 10,
-            color: Color.fromARGB(255, 255, 255, 255),
+            color: Colors.black87,
+            // color: Color.fromARGB(255, 255, 255, 255),
             height: 2,
             letterSpacing: 4,
           ),
@@ -137,7 +138,9 @@ class _LoginPageState extends State<Login> {
           style: TextStyle(
             fontSize: 44,
             fontWeight: FontWeight.bold,
-            color: Color.fromARGB(255, 255, 255, 255),
+            color: Colors.black87,
+            // color: Color.fromARGB(255, 96, 114, 116),
+            // color: Color.fromARGB(255, 255, 255, 255),
             height: 1.2,
             letterSpacing: 2,
           ),

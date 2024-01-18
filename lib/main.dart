@@ -120,8 +120,8 @@ class CurvePainter extends CustomPainter {
     var paint = Paint();
     paint.shader = const RadialGradient(
       colors: [
-        Color.fromARGB(255, 45, 50, 80),
-        Color.fromARGB(255, 112, 119, 161),
+        Color.fromARGB(255, 222, 208, 182),
+        Color.fromARGB(255, 178, 165, 155),
         // Color.fromARGB(255, 251, 133, 0),
         // Color.fromARGB(255, 255, 183, 3),
       ],
